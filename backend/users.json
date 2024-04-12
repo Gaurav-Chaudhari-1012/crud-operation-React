@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "0be9",
+      "firstName": "Gaurav",
+      "lastName": "Chaudhari",
+      "age": "23",
+      "city": "Mumbai"
+    },
+    {
+      "id": "8fea",
+      "firstName": "Vivek",
+      "lastName": "More",
+      "age": "23",
+      "city": "Pune"
+    }
+  ]
+}
