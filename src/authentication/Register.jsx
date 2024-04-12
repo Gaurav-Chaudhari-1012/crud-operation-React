@@ -8,10 +8,10 @@ const Register = () => {
     const [registerData, setRegisterData] = useState({
         email: "",
         password: "",
-        prof_pic: ""
+        conNumber: ""
     });
 
-    const { email, password, prof_pic } = registerData;
+    const { email, password, conNumber } = registerData;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,12 +21,12 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Validation check
-        if (!email || !password || !prof_pic) {
+        if (!email || !password || !conNumber) {
             toast.error('Please fill in all fields');
             return;
         }
 
-        const payload = { email, password, prof_pic };
+        const payload = { email, password, conNumber };
         try {
             await axios.post("http://localhost:5000/registeruser", payload);
             navigator("/login");
@@ -62,11 +62,11 @@ const Register = () => {
                 </div>
 
                 <div className="form-group">
-                    <label>Profile Pic</label>
+                    <label>Phone Number</label>
                     <input
-                        type="text"
-                        name='prof_pic'
-                        value={prof_pic}
+                        type="tel"
+                        name='conNumber'
+                        value={conNumber}
                         onChange={handleChange}
                     />
                 </div>
